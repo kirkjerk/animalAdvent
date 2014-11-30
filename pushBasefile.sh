@@ -1,0 +1,26 @@
+#!/bin/sh
+cp animals/puppet.pde animals/alligator/
+cp animals/puppet.pde animals/bat/
+cp animals/puppet.pde animals/bug/
+cp animals/puppet.pde animals/chick/
+cp animals/puppet.pde animals/crab/
+cp animals/puppet.pde animals/crow/
+cp animals/puppet.pde animals/dachshhund/
+cp animals/puppet.pde animals/deer/
+cp animals/puppet.pde animals/dragon/
+cp animals/puppet.pde animals/elephant/
+cp animals/puppet.pde animals/fish/
+cp animals/puppet.pde animals/frog/
+cp animals/puppet.pde animals/giraffe/
+cp animals/puppet.pde animals/gorilla/
+cp animals/puppet.pde animals/mice/
+cp animals/puppet.pde animals/monkey/
+cp animals/puppet.pde animals/octopus/
+cp animals/puppet.pde animals/pelican/
+cp animals/puppet.pde animals/pig/
+cp animals/puppet.pde animals/santa/
+cp animals/puppet.pde animals/shaggydog/
+cp animals/puppet.pde animals/snake/
+cp animals/puppet.pde animals/spider/
+cp animals/puppet.pde animals/turtle/
+cp animals/puppet.pde animals/whale/

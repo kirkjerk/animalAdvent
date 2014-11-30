@@ -1,0 +1,490 @@
+
+body {
+    font-family: arial,helvetica,sans-serif;
+    
+    
+}
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+h1 b{
+    font-size:60px;
+}
+.title{
+    width:700px;
+    margin:auto;
+}
+.title .leftbird{
+    float:left;
+}
+.title .rightbird{
+    float:right;
+}
+
+h1 img {
+    vertical-align:middle;
+    border:  1px solid #999999;
+}
+
+.book {
+    width:200px;
+    float:right;
+    font-size:12px;
+    text-align: center;
+    padding:8px;
+}
+.book img {
+    width:200px;
+    height:156px;
+    border:none;
+}
+
+.intro {
+    width:800px;
+    margin: auto;
+}
+.content-holder {
+    margin: auto;
+    width: 870px;
+}
+.advcal {
+        width:880px;
+        margin: auto;
+}
+
+.advcal .daymark {
+    position:absolute;
+    text-align: center;
+    vertical-align:center;
+    line-height: 160px;
+    width:160px;
+    height:160px;
+    font-size:140px;
+    opacity:.5;
+    z-index: 10;
+}
+
+
+
+.advcal .day.locked .daymark {
+    opacity:1;
+    color:white;
+}
+
+.advcal .day{
+    margin:5px;
+    display:inline-block;
+    width:160px;
+    height:160px;
+    position:relative;
+}
+
+.advcal .day .img{
+    position:absolute;
+    z-index: 5;
+}
+
+.advcal .day:nth-child(even) {
+    color: red;
+}
+
+.advcal .day:nth-child(even) {
+    border:1px solid red;
+}
+
+.advcal .day:nth-child(odd) {
+    color: green;
+}
+
+.advcal .day:nth-child(odd)  {
+    border: 1px solid green;
+}
+
+.advcal .day.today.unpicked {
+    
+    animation-name: homeCycle; 
+    animation-duration:1s; 
+    animation-direction:normal; 
+    animation-iteration-count:infinite; 
+
+    -webkit-animation-name: homeCycle; 
+    -webkit-animation-duration:1s; 
+    -webkit-animation-direction:normal; 
+    -webkit-animation-iteration-count:infinite; }	
+
+@keyframes homeCycle 
+{
+
+50% {color:yellow}
+
+
+} 
+
+@-webkit-keyframes homeCycle 
+{ 
+
+50% {color:yellow}
+}
+
+
+
+
+
+
+
+.advcal .day.unlocked, .advcal .day.seen{
+    cursor: pointer;
+}
+
+
+
+.advcal .day:nth-child(even).unlocked .daymark:hover, .advcal .day:nth-child(even).seen .daymark:hover{
+    transition: background-color .2s ;
+    background-color: #ff0000;
+    
+}
+.advcal .day:nth-child(odd).unlocked .daymark:hover,.advcal .day:nth-child(odd).seen .daymark:hover {
+    transition: background-color .1s ;
+    background-color: #008000;
+    
+}
+
+
+.advcal .day:nth-child(even).picked .daymark{
+    transition: background-color 2s ;
+    background-color: #ff0000;
+}
+.advcal .day:nth-child(odd).picked .daymark{
+    transition: background-color  2s;
+    background-color: #008000;
+}
+
+.advcal .day:nth-child(even).unpicked .daymark{
+    transition: background-color 2s ;
+    background-color: none;
+}
+.advcal .day:nth-child(odd).unpicked .daymark{
+    transition: background-color  2s;
+    background-color: none;
+}
+
+
+.advcal .day.locked .img.active{
+    display:none;    
+}
+.advcal .day.unlocked .img.inactive{
+    display:none;    
+}
+.advcal .img.seen {
+    display:none;
+}
+
+
+
+.jqmWindow {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    height:500px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+#puppetframe{
+    width:500px;
+    height:500px;
+    border:none;
+}
+#dialog .jqmClose{
+    width:40px;
+    height:40px;
+    background-image: url(img/close.png);
+    position:absolute;
+    right:-10px;
+    top:-10px;
+}
+#dialog .jqmClose:hover{
+    background-image: url(img/close_on.png);
+}
+
+.img {
+    width:160px;
+    height:160px;
+    background-image: url('spritesheet.png');
+    
+}
+
+.snake .img.active{
+       background-position: 0px 0px
+}
+.snake .img.inactive{
+       background-position: 0px -160px
+}
+.snake .img.seen{
+       background-position: 0px -320px
+}
+.spider .img.active{
+       background-position: 0px -480px
+}
+.spider .img.inactive{
+       background-position: 0px -640px
+}
+.spider .img.seen{
+       background-position: 0px -800px
+}
+.bug .img.active{
+       background-position: 0px -960px
+}
+.bug .img.inactive{
+       background-position: 0px -1120px
+}
+.bug .img.seen{
+       background-position: 0px -1280px
+}
+.chick .img.active{
+       background-position: 0px -1440px
+}
+.chick .img.inactive{
+       background-position: 0px -1600px
+}
+.chick .img.seen{
+       background-position: 0px -1760px
+}
+.turtle .img.active{
+       background-position: 0px -1920px
+}
+.turtle .img.inactive{
+       background-position: 0px -2080px
+}
+.turtle .img.seen{
+       background-position: 0px -2240px
+}
+.mice .img.active{
+       background-position: 0px -2400px
+}
+.mice .img.inactive{
+       background-position: 0px -2560px
+}
+.mice .img.seen{
+       background-position: 0px -2720px
+}
+.crow .img.active{
+       background-position: 0px -2880px
+}
+.crow .img.inactive{
+       background-position: 0px -3040px
+}
+.crow .img.seen{
+       background-position: 0px -3200px
+}
+.pelican .img.active{
+       background-position: 0px -3360px
+}
+.pelican .img.inactive{
+       background-position: 0px -3520px
+}
+.pelican .img.seen{
+       background-position: 0px -3680px
+}
+.frog .img.active{
+       background-position: 0px -3840px
+}
+.frog .img.inactive{
+       background-position: 0px -4000px
+}
+.frog .img.seen{
+       background-position: 0px -4160px
+}
+.crab .img.active{
+       background-position: 0px -4320px
+}
+.crab .img.inactive{
+       background-position: 0px -4480px
+}
+.crab .img.seen{
+       background-position: 0px -4640px
+}
+.bat .img.active{
+       background-position: 0px -4800px
+}
+.bat .img.inactive{
+       background-position: 0px -4960px
+}
+.bat .img.seen{
+       background-position: 0px -5120px
+}
+.dachshhund .img.active{
+       background-position: 0px -5280px
+}
+.dachshhund .img.inactive{
+       background-position: 0px -5440px
+}
+.dachshhund .img.seen{
+       background-position: 0px -5600px
+}
+.shaggydog .img.active{
+       background-position: 0px -5760px
+}
+.shaggydog .img.inactive{
+       background-position: 0px -5920px
+}
+.shaggydog .img.seen{
+       background-position: 0px -6080px
+}
+.pig .img.active{
+       background-position: 0px -6240px
+}
+.pig .img.inactive{
+       background-position: 0px -6400px
+}
+.pig .img.seen{
+       background-position: 0px -6560px
+}
+.elephant .img.active{
+       background-position: 0px -6720px
+}
+.elephant .img.inactive{
+       background-position: 0px -6880px
+}
+.elephant .img.seen{
+       background-position: 0px -7040px
+}
+.deer .img.active{
+       background-position: 0px -7200px
+}
+.deer .img.inactive{
+       background-position: 0px -7360px
+}
+.deer .img.seen{
+       background-position: 0px -7520px
+}
+.fish .img.active{
+       background-position: 0px -7680px
+}
+.fish .img.inactive{
+       background-position: 0px -7840px
+}
+.fish .img.seen{
+       background-position: 0px -8000px
+}
+.octopus .img.active{
+       background-position: 0px -8160px
+}
+.octopus .img.inactive{
+       background-position: 0px -8320px
+}
+.octopus .img.seen{
+       background-position: 0px -8480px
+}
+.whale .img.active{
+       background-position: 0px -8640px
+}
+.whale .img.inactive{
+       background-position: 0px -8800px
+}
+.whale .img.seen{
+       background-position: 0px -8960px
+}
+.monkey .img.active{
+       background-position: 0px -9120px
+}
+.monkey .img.inactive{
+       background-position: 0px -9280px
+}
+.monkey .img.seen{
+       background-position: 0px -9440px
+}
+.gorilla .img.active{
+       background-position: 0px -9600px
+}
+.gorilla .img.inactive{
+       background-position: 0px -9760px
+}
+.gorilla .img.seen{
+       background-position: 0px -9920px
+}
+.giraffe .img.active{
+       background-position: 0px -10080px
+}
+.giraffe .img.inactive{
+       background-position: 0px -10240px
+}
+.giraffe .img.seen{
+       background-position: 0px -10400px
+}
+.alligator .img.active{
+       background-position: 0px -10560px
+}
+.alligator .img.inactive{
+       background-position: 0px -10720px
+}
+.alligator .img.seen{
+       background-position: 0px -10880px
+}
+.dragon .img.active{
+       background-position: 0px -11040px
+}
+.dragon .img.inactive{
+       background-position: 0px -11200px
+}
+.dragon .img.seen{
+       background-position: 0px -11360px
+}
+.santa .img.active{
+       background-position: 0px -11520px
+}
+.santa .img.inactive{
+       background-position: 0px -11680px
+}
+.santa .img.seen{
+       background-position: 0px -11840px
+}
+
+
+
+//JQMODAL
+
+.jqmWindow {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    height:500px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}

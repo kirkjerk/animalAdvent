@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>animal advent ala ed emberley</title>
+<link rel="stylesheet" type="text/css" href="puppets.css" />
+<script src="scripts/jquery-1.11.1.min.js"></script>
+<script src="scripts/jqModal.js"></script>
+<script src="scripts/jquery.cookies.js"></script>
+<script src="puppets.js"></script>
+</head>
+<body>
+    <!--
+        Hello!
+        
+        I thought about trying to hide things (maybe through the sneakiness of rot13!) but you know,
+        if you're curious, and know enough to peek behind the covers, you are welcome to try any of
+        several methods to 'fool' the page into showing you the puppets early.
+    
+        -Kirk
+    
+    -->
+    
+    
+    
+    
+<div class="jqmWindow" id="dialog">
+    <nav class="jqmClose"></nav>
+    <iframe id="puppetframe"></iframe>
+</div>
+    
+    
+<div class="content-holder">  
+        <h1 class="title">
+            <img src="img/isNotBird.png" class="leftbird">
+                <img src="img/shakeATailFeather.gif" id="bird" onmouseover='this.src="img/shakeATailFeather.gif"' class="rightbird">
+                <b>animal advent</b><br/><i>ala ed emberley</i>          
+                <div style="clear: both;"></div>              
+        </h1>
+    <div class="intro">
+        <p>
+            <div class="book""><a href="http://www.amazon.com/Ed-Emberleys-Drawing-Book-Animals/dp/0316789798"><img src="img/book.jpg"><br>Buy It On Amazon</a>&mdash;<br/>It's really good!</div>
+                I grew up with <a href="http://www.amazon.com/Ed-Emberleys-Drawing-Book-Animals/dp/0316789798">Ed Emberley's Drawing Book of Animals</a>. it's a terrific book that shows kids and grownups how to construct animals step by step out of letters and simple shapes they already know how to draw. (Years later, I realized that the visual style I developed for my "virtual toys" employs the same core ideas, drawing things with rectangles, triangles, circles, and simple curves instead of pre-canned graphics. This book must have been a huge influence!)
+        </p>
+
+    <p>
+        This year, I have made an Online Advent Calendar with 25 "Animal Puppets". <b>For every day in December up until Christmas, a new puppet is unlocked!</b> Each shows off its construction from shapes and symbols and each is a little puppet you can operate with the mouse movement and button. (Just like that bird up there will "shake a tailfather" if you pass the mouse over it.)
+    </p>
+
+    <p>The animal puppets start simple but get complex, so come back every day for a new virtual toy.</p>
+    
+    <p>Happy Holidays!
+        <br>Kirk &lt;<a href="mailto:kirk@kirk.is">kirk@kirk.is</a>&gt;
+    </p>
+    
+    
+    </div>
+
+<div style="display:none;"><img src="spritesheet.png"></div>
+
+<div class="advcal">
+<div data-puppet="snake" class="day day1 locked snake"><div class="daymark">1</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="spider" class="day day2 locked spider"><div class="daymark">2</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="bug" class="day day3 locked bug"><div class="daymark">3</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="chick" class="day day4 locked chick"><div class="daymark">4</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="turtle" class="day day5 locked turtle"><div class="daymark">5</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="mice" class="day day6 locked mice"><div class="daymark">6</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="crow" class="day day7 locked crow"><div class="daymark">7</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="pelican" class="day day8 locked pelican"><div class="daymark">8</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="frog" class="day day9 locked frog"><div class="daymark">9</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="crab" class="day day10 locked crab"><div class="daymark">10</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="bat" class="day day11 locked bat"><div class="daymark">11</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="dachshhund" class="day day12 locked dachshhund"><div class="daymark">12</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="shaggydog" class="day day13 locked shaggydog"><div class="daymark">13</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="pig" class="day day14 locked pig"><div class="daymark">14</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="elephant" class="day day15 locked elephant"><div class="daymark">15</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="deer" class="day day16 locked deer"><div class="daymark">16</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="fish" class="day day17 locked fish"><div class="daymark">17</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="octopus" class="day day18 locked octopus"><div class="daymark">18</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="whale" class="day day19 locked whale"><div class="daymark">19</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="monkey" class="day day20 locked monkey"><div class="daymark">20</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="gorilla" class="day day21 locked gorilla"><div class="daymark">21</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="giraffe" class="day day22 locked giraffe"><div class="daymark">22</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="alligator" class="day day23 locked alligator"><div class="daymark">23</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="dragon" class="day day24 locked dragon"><div class="daymark">24</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+<div data-puppet="santa" class="day day25 locked santa"><div class="daymark">25</div><div class="img active"></div><div class="img inactive"></div><div class="img seen"></div></div>
+
+</div>
+
+</div>
+</body>
+</html>

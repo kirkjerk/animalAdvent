@@ -27,7 +27,7 @@ like <code>drawCircle(figX(place,BASE*.2),figY(place,BASE*.3),avgd(20,BASE*.4));
 the puppet is broken up into pieces. BASE is (more or less) a constant reflecting
 the size/scale of the creature. (Every puppet part is placed based on a multiple
 of BASE when the puppet is in constructed form.) So "figX" calculates the x position,
-at it's "place" if the puppet is deconstructed, at its final location if the puppet
+at its "place" if the puppet is deconstructed, at its final location if the puppet
 is put together, or somewhere in between during the transition times. </p>
 
 <p>Similarly, "avgd" is the first value when deconstructed, the second value when fully

@@ -4,6 +4,9 @@ body {
     
     
 }
+
+
+
 a {
     text-decoration: none;
 }
@@ -184,6 +187,13 @@ h1 img {
     display:none;
 }
 
+
+.shareit {
+    float:right;
+}
+.spritesheet_preload {
+    display:none;
+}
 
 
 .jqmWindow {

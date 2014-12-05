@@ -111,14 +111,18 @@ rock += .2;
 //-.924
 
       if(k.mousePressed()) {
-       if(tailAng > -.924) tailAng -= .1; 
+         if(tailAng > -.924) {
+             tailAng -= .105;
+         } 
       } else {
-        if(tailAng < -.432) tailAng += .1;
+          if(tailAng < -.432) {
+            tailAng += .105;
+          }
       }
-constrain(tailAng, -.924,-.432);
+      tailAng = constrain(tailAng, -.924,-.432);
       drawC(figX(placeTail,tailX),figY(placeTail,tailY),zerod(tailAng*PI),avgd(16,tailSize),1,zerod(-1.6));
 
-  
+  //-.432
       noStroke();
       
       fill(BLACK);//

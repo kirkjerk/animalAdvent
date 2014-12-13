@@ -100,7 +100,7 @@ class Dach extends Animal {
     
 //drawC(float x, float y, float a, float sz, float stretch, float extraangle) {
     
-  drawCFromBot(figX(place,BASE*-.096),figY(place,BASE*-.092),zerod(-PI/3 + k.scaleX/2),avgd(15,BASE*.25),1,zerod(-1));
+  drawCFromBot(figX(place,BASE*-.096),figY(place,BASE*-.092)+antizerod(9),zerod(-PI/3 + k.scaleX/2),avgd(18,BASE*.25),1,zerod(-1));
   }
 
 

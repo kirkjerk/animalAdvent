@@ -11,10 +11,17 @@ var puppetMaster = (function(){
         setTimeout(shakeThatTailFeather,Math.random() * 20000);
     }
     //start off unlocking
-    function initialUnlock(target){        
+    function initialUnlock(){
+        //reset all days
         $(".day").removeClass("today").removeClass("unlocked").addClass("locked");
-        if(target == "all") target = 25;
-        unlockDay(1, target)
+        //we unlock everything if it's not December, otherwise unlock up to the day
+        var maxDay = 25;
+        var now = new Date();
+        if(now.getMonth() + 1 == 12){
+            maxDay = now.getDate();
+        }
+        
+        unlockDay(1, maxDay)
     }
     
     function unlockDay(day, target){
@@ -68,7 +75,7 @@ var puppetMaster = (function(){
         //$("#daypick").change(function(){ unlock($("#daypick").val());}); //former preview thing
         $(".advcal .day").click(clickDay).addClass("unpicked"); //for all the days, make clickable, and then not picked (picked is currently open)
         loadPreviouslyOpened();
-        initialUnlock(new Date().getDate());
+        initialUnlock();
         $('#dialog').jqm({onHide:closePuppetModal});
         //preload the buttom close image
         var closePreload = new Image();
